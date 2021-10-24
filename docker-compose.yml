@@ -1,0 +1,27 @@
+#! Local use only
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./tuagenda
+    container_name: flask
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tuagenda:/app
+    environment:
+      - PORT=8080
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@pgsql:5432/tuagenda
+
+  pgsql:
+    image: "postgres"
+    container_name: pgsql
+    env_file:
+      - database.env
+    volumes:
+      - .database-data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
