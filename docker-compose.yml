@@ -1,5 +1,5 @@
 #! Local use only
-version: "3.7"
+version: "3.8"
 
 services:
 
@@ -17,7 +17,7 @@ services:
       - DATABASE_URL=postgresql://postgres:password@pgsql:5432/tuagenda
 
   pgsql:
-    image: "postgres"
+    image: postgres:13-alpine
     container_name: pgsql
     env_file:
       - database.env
