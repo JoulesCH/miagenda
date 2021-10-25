@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath tuagenda wsgi:app
+web: gunicorn --pythonpath tuagenda run:app

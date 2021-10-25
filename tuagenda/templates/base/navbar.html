@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #101740;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #101740;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
@@ -14,27 +14,45 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          {%if '/' == request.path%}
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          {%else%}
+            <a class="nav-link" aria-current="page" href="/">Inicio</a>
+          {%endif%}
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Guía rápida</a>
+          {%if '/guia' == request.path%}
+            <a class="nav-link active" href="/guia">Guía rápida</a>
+          {%else%}
+            <a class="nav-link" href="/guia">Guía rápida</a>
+          {%endif%}
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Acerca de
-          </a>
+          {%if '/acercade' in request.path%}
+            <a class="nav-link dropdown-toggle active" href="/acercade" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acerca de
+            </a>
+          {%else%}
+            <a class="nav-link dropdown-toggle" href="/acercade" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acerca de
+            </a>
+          {%endif%}
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Documento de diseño</a></li>
-            <li><a class="dropdown-item" href="#">Tecnologías</a></li>
-            <li><a class="dropdown-item" href="#">Arquitectura</a></li>
+            <li><a class="dropdown-item" href="/acercade#sdd">Documento de diseño</a></li>
+            <li><a class="dropdown-item" href="/acercade#techs">Tecnologías</a></li>
+            <li><a class="dropdown-item" href="/acercade#arch">Arquitectura</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item disabled" href="/">Diagramado</a></li>
-            <li><a class="dropdown-item" href="#">UML</a></li>
-            <li><a class="dropdown-item" href="/">RE</a></li>
+            <li><a class="dropdown-item disabled" href="#">Diagramado</a></li>
+            <li><a class="dropdown-item" href="/acercade#uml">UML</a></li>
+            <li><a class="dropdown-item" href="/acercade#re">RE</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/creditos">Créditos</a>
+          {%if '/creditos' == request.path%}
+            <a class="nav-link active" href="/creditos">Créditos</a>
+          {%else%}
+            <a class="nav-link" href="/creditos">Créditos</a>
+          {%endif%}
         </li>
       </ul>
       <form class="d-flex">
