@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath tuagenda run:app
+web: gunicorn --pythonpath miagenda run:app
