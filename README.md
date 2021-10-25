@@ -58,10 +58,12 @@ sus compañeros, agregando consistencia a los datos.
 
 ### 📊 Diagramas
 
-Diagrama de clases
+Diagrama de Entidad Relación
+![img](https://i.ibb.co/r203FPw/miagenda-com.png)
 
-Diagrama de secuencia
 
+Diagrama de Casos de Uso
+![img](https://i.ibb.co/sVcXd3C/casosdeuso.png)
 
 ### 🧬 Modelo de datos
 
