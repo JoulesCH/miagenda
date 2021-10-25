@@ -1,6 +1,7 @@
 #project:
 .database-data/
-
+migrations_joules/
+node_modules/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

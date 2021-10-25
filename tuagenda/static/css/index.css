@@ -1,0 +1,26 @@
+.image-carousel{
+    height: 380px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.image1{
+    background-image: url(https://i.ibb.co/Rv54cWj/eric-rothermel-Fo-KO4-Dp-Xam-Q-unsplash.jpg);
+}
+
+.image2{
+    background-image: url(https://i.ibb.co/WxdWByq/lukas-blazek-UAv-Yasdkzq8-unsplash.jpg);
+}
+
+.image3{
+    background-image: url(https://i.ibb.co/5TGxFLY/compare-fibre-Y8-Ti-Lv-Kn-Leg-unsplash.jpg);
+}
+
+.carousel-caption{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+main{
+    padding:30px;
+}

@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="shortcut icon" type = "image/png" href="{{url_for('static', filename= 'favicon.ico')}}">
+    <title>tuagenda | {%block title%} {%endblock%}</title>
+    {%block head%} {%endblock%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/navbar.css')}}">
 </head>
 <body>
-    Hola mundo
+    {%include "base/navbar.html"%}
+    {%block content%}
+    {%endblock%}
+
+    {%include "base/footer.html"%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

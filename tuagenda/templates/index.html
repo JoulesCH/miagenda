@@ -1,0 +1,112 @@
+{%extends "/base/base.html"%}
+
+{%block title%}
+    Inicio
+{%endblock%}
+
+{%block head%}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{%endblock%}
+
+{%block content%}
+    <div id="carouselExampleCaptions" class="carousel carousel-dark  slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-carousel image1"></div>
+<!--          <img src="https://i.ibb.co/2KHLBT5/imagen-2021-10-24-223608.png" height="300px" d-block w-100" alt="...">-->
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Organiza tu agenda <b>escolar</b> </h5>
+            <p>Como en cualquier otro servicio de calendarios, con la diferencia de que nos especializamos en agendas escolares</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="image-carousel image2"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Activa las notificaciones</h5>
+            <p>Para que siempre seas puntual en tus clases</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="image-carousel image3"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ten a la mano la información</h5>
+            <p>sobre tus materias, incluyendo la evaluación, datos del profesor, enlace a las plataformas y más</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+      <div class="px-4 py-5 my-5 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+            <path fill="#FE8B6A" fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path fill="#FE8B6A"  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+            <path fill="#FE8B6A" d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+        </svg>
+        <h1 class="display-5 fw-bold">¿Qué es tuagenda.com?</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Es una agenda y calendario en línea especializado para estudiantes, es desarrollado por estudiantes de la UNAM.
+            Permite sincronizarlo con compañeros de clase permitiendo que podamos invitarlos y compartir la agenda. Actualmente sigue en fase de desarrollo.
+          </p>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+          <div class="container px-5">
+            <img src="https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Toda la información de tus materias en un solo lugar</h1>
+          <p class="lead">Podrías</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">¡Únete y empieza a crear ahora!</h1>
+          <p class="col-lg-10 fs-4">Totalmente gratuito</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Correo</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> No cerrar sesión
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Crear cuenta</button>
+            <hr class="my-4">
+            <small class="text-muted">Dando clic en Crear cuenta, aceptas los términos de uso.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+
+{%endblock%}
