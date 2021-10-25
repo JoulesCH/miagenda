@@ -13,8 +13,8 @@ class Agenda(db.Model):
     id = db.Column(db.BigInteger, primary_key=True, autoincrement=True)
 
 
-class Account(db.Model):
-    __tablename__ = 'accounts'
+class Cuenta(db.Model):
+    __tablename__ = 'cuentas'
 
     id =  db.Column(db.BigInteger, primary_key=True, autoincrement=True)
 
