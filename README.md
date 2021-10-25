@@ -62,7 +62,8 @@ Diagrama de Relación de Entidades
 ![img](https://i.ibb.co/r203FPw/miagenda-com.png)
 
 
-Diagrama de secuencia
+Casos de Uso
+![img](https://i.ibb.co/sVcXd3C/casosdeuso.png)
 
 
 ### 🧬 Modelo de datos
