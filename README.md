@@ -30,6 +30,7 @@ sus compañeros, agregando consistencia a los datos.
 - El usuario no puede tener dos o más agendas
 - No existen agendas privadas, es decir, cualquier enlace a la agenda es accesible por la web
 
+
 ---
 ### ⛩ Arquitectura
 
