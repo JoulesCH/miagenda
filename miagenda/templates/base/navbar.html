@@ -6,7 +6,7 @@
         <path fill="#FE8B6A"  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
         <path fill="#FE8B6A" d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
       </svg>
-      tuagenda.com
+      miagenda.com
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -55,10 +55,29 @@
           {%endif%}
         </li>
       </ul>
-      <form class="d-flex">
-        <a type="button" href="/login" class="btn btn-outline-primary login">Iniciar Sesión</a>
-        <a type="button" href="/signup" class="btn btn-primary login">Registrarse</a>
-      </form>
+
+      {%if 'session' not in request.get_cookies%}
+        <form class="d-flex">
+          <a type="button" href="/login" class="btn btn-outline-primary login">Iniciar Sesión</a>
+          <a type="button" href="/signup" class="btn btn-primary login">Registrarse</a>
+        </form>
+      {%else%}
+        <div class="flex-shrink-0 dropdown">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://i.ibb.co/vPbT5V5/blank-profile-picture-973460-1280.webp" class="rounded-circle" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="position: absolute;
+                                                                                            inset: 0px 0px auto auto;
+                                                                                            margin: 0px;
+                                                                                            transform: translate(0px, 34px);">
+            <li><a class="dropdown-item" href="/agendas/nueva">Nueva agenda...</a></li>
+            <li><a class="dropdown-item" href="/agendas/miagenda">Ver mi agenda</a></li>
+            <li><a class="dropdown-item" href="/cuenta/configuración">Configuración</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+          </ul>
+        </div>
+      {%endif%}
     </div>
   </div>
 </nav>
