@@ -47,7 +47,7 @@ class Horario(db.Model):
     materia_id = db.Column(db.BigInteger, db.ForeignKey('materias.id'))
     materia  = db.relationship('Materia')
 
-
+ 
 # Usuarios
 class Cuenta(db.Model):
     __tablename__ = 'cuentas'
