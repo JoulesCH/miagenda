@@ -4,6 +4,37 @@
 
 {%block titulo%}Registrarse{%endblock%}
 {%block boton%}Registrarse{%endblock%}
+{%block action%}/signup{%endblock action%}
+
+{%block form%}
+    <div class="form-floating mb-3">
+        <input  required onkeyup="compare_input()" name="contasena2" type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+        <label for="floatingPassword2">Verificar contraseña</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input required name="escuela" type="text" class="form-control" id="floatingEscuela" placeholder="Escuela">
+        <label for="floatingEscuela">Escuela</label>
+    </div>
+{%endblock form%}
+
+{%block validation%} 
+    <script>
+        var f_input=document.getElementById('floatingPassword2');
+        var s_input=document.getElementById('floatingPassword');
+        var button=document.getElementById('gobtn');
+        function compare_input(){
+            if(f_input.value!=s_input.value && s_input.value!='' ){
+                console.log('Invalida');
+                f_input.classList.add("is-invalid");
+                button.classList.add("disabled");
+            }
+            else{
+                f_input.classList.remove("is-invalid");
+                button.classList.remove("disabled");
+            }
+        }
+    </script>
+{%endblock validation%}
 
 {%block antititulo%}
     <a href="/login" style=" color: #101740;">Iniciar sesión</a>

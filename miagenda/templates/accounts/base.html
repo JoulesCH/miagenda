@@ -17,7 +17,7 @@
 
 {%block content%}
     <main class="form-signin text-center">
-        <form>
+        <form action="{%block action%}{%endblock action%}" method="POST">
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
                 <path fill="#FE8B6A" fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                 <path fill="#FE8B6A"  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
@@ -26,21 +26,33 @@
         <h1 class="h3 mb-3  mt-3 fw-normal">{%block titulo%}{%endblock titulo%}</h1>
     
         <div class="form-floating mb-3">
-            <input autofocus type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input required name="correo" autofocus type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Correo</label>
         </div>
-        <div class="form-floating mb-4">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <div class="form-floating mb-3">
+            <input required name="contrasena" type="password" class="form-control" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Contraseña</label>
         </div>
-    
+        {%block form%}{%endblock form%}
         <div class="checkbox mb-3">
             <label>
-            <input type="checkbox" value="remember-me"> Recordar este dispositivo
+            <input  type="checkbox" value="remember-me"> Recordar este dispositivo
             </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">{%block boton%}{%endblock%}</button>
+        {%if error%}
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-x" viewBox="0 0 16 16">
+                    <path d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+                  </svg>
+                {{error}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {%endif%}
+        <button id="gobtn" class="w-100 btn btn-lg btn-primary" type="submit">{%block boton%}{%endblock%}</button>
         <p class="mt-5 mb-3 text-muted">{%block antititulo%}{%endblock antititulo%}</p>
         </form>
     </main>
+    {%block validation%} {%endblock validation%}
 {%endblock content%}

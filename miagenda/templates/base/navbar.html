@@ -56,7 +56,7 @@
         </li>
       </ul>
 
-      {%if 'session' not in request.get_cookies%}
+      {%if 'token' not in request.cookies%}
         <form class="d-flex">
           <a type="button" href="/login" class="btn btn-outline-primary login">Iniciar Sesión</a>
           <a type="button" href="/signup" class="btn btn-primary login">Registrarse</a>
@@ -70,8 +70,8 @@
                                                                                             inset: 0px 0px auto auto;
                                                                                             margin: 0px;
                                                                                             transform: translate(0px, 34px);">
-            <li><a class="dropdown-item" href="/agendas/nueva">Nueva agenda...</a></li>
-            <li><a class="dropdown-item" href="/agendas/miagenda">Ver mi agenda</a></li>
+            <li><a class="dropdown-item" href="/miagenda">Ver mi agenda</a></li>
+            <li><a class="dropdown-item" href="/gestionar">Gestionar mi agenda</a></li>
             <li><a class="dropdown-item" href="/cuenta/configuración">Configuración</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>

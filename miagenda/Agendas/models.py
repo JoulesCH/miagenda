@@ -1,4 +1,10 @@
+# Builtin packages
+import string
+import random
+
 from core.database import db
+
+letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
 
 agenda_materia = db.Table('agenda_materia', db.Model.metadata,
                            db.Column('agenda_id', db.BigInteger, db.ForeignKey('agendas.id'), primary_key=True),
@@ -13,6 +19,8 @@ class Agenda(db.Model):
     nombre = db.Column(db.String)
     materias = db.relationship('Materia', secondary=agenda_materia, lazy='subquery',
                                  backref=db.backref('horario', lazy=True))
+    def __init__(self, nombre):
+        self.nombre = nombre
 
 class Materia(db.Model):
     __tablename__ = 'materias'
@@ -54,6 +62,12 @@ class Cuenta(db.Model):
     agenda_id = db.Column(db.BigInteger, db.ForeignKey('agendas.id'))
     agenda = db.relationship("Agenda", backref=db.backref("cuenta", uselist=False))
 
+    def __init__(self, contraseña, correo, escuela, agenda):
+        self.contraseña = contraseña
+        self.correo = correo
+        self.escuela = escuela
+        self.agenda = agenda # Agenda(f'Agenda de {correo[:correo.find("@")]}')
+        self.agenda_id = self.agenda.id
 
 class Sesion(db.Model):
     __tablename__ = 'sesiones'
@@ -66,3 +80,9 @@ class Sesion(db.Model):
 
     cuenta_id = db.Column(db.BigInteger, db.ForeignKey('cuentas.id'))
     cuenta = db.relationship("Cuenta", backref=db.backref("sesion", uselist=False))
+    
+    def __init__(self, dispositivo, cuenta):
+        self.dispositivo = dispositivo
+        self.cuenta = cuenta
+        self.cuenta_id = self.cuenta.id
+        self.token = ''.join(random.choice(letters) for i in range(10))
