@@ -15,7 +15,6 @@ services:
       - PORT=8080
       - FLASK_ENV=development
       - DATABASE_URL=postgresql://postgres:password@pgsql:5432/miagenda
-      #postgres://qzphctnwxzmfwh:96c2b4a872bd18ed89a55e83a66eef978bff2441ab6dbeb0ddab85a0f5f33f10@ec2-44-199-83-229.compute-1.amazonaws.com:5432/dcr8pjup78sa2k
 
   pgsql:
     image: postgres:13-alpine
