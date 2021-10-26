@@ -41,7 +41,7 @@ def mi_agenda():
     return redirect(f'/agenda/{id}')
 
 def agenda(id):
-    return 'Hola mundo'
+    return render_template('agendas/agenda.html')
 
 # Accounts
 @not_login_required
