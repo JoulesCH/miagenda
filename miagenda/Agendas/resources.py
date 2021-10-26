@@ -41,6 +41,9 @@ def mi_agenda():
     return redirect(f'/agenda/{id}')
 
 def agenda(id):
+    # TODO:
+    # Agenda query
+    # Buttons for update and share agenda 
     return render_template('agendas/agenda.html')
 
 # Accounts
