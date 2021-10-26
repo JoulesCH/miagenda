@@ -39,7 +39,7 @@ def credits(): return render_template('credits.html')
 def mi_agenda():
     id = m.Sesion.query.filter(m.Sesion.token==request.cookies.get('token')).first().cuenta.agenda.id
     return redirect(f'/agenda/{id}')
- 
+  
 def agenda(id):
     # TODO:
     # Agenda query
