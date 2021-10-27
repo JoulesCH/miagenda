@@ -16,7 +16,7 @@ mano la información más importante, como por ejemplo: evaluación,
 nombre del maestro, grupo y por supuesto los enlaces a las plataformas.
 - El estudiante podrá elegir un color distintivo para cada materia
 
-Cada vez que un estudiante con sesión iniciada accceda a la plataforma:
+Cada vez que un estudiante con sesión iniciada acceda a la plataforma:
 - Le mostrará en grande la materia que está por iniciar, junto con sus datos, permitiendo que en un solo
 clic se pueda acceder a las plataformas. También le permitirá ver las siguientes materias del día.
 
