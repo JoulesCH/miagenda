@@ -1,0 +1,74 @@
+.app-content{
+    padding: 40px;
+    padding-top: 90px;
+}
+
+.bg-blue {
+    background: linear-gradient(70deg, #FE8B6A, #DF7A5D);
+}
+.bg-gradient-custom-orange{
+    background: linear-gradient(70deg, #74E4BA, #5EC09B);
+}
+.bg-gradient-custom-pink{
+    background: linear-gradient(70deg, #FFA43C, #DF8F31);
+}
+.bg-gradient-custom-teal{
+    background: linear-gradient(70deg, #FC7392, #C85B74);
+}
+.bg-gradient-custom-indigo{
+    background: linear-gradient(70deg, #866DF9, #6D5AC4);
+}
+.rounded {
+    border-radius: 6px!important;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.card-c {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border-radius: 20px;
+}
+.text-white-transparent-5 {
+    color: rgba(255,255,255,.5)!important;
+}
+.text-white-transparent-6 {
+    color: rgba(255,255,255,.6)!important;
+}
+.text-white-transparent-7 {
+    color: rgba(255,255,255,.7)!important;
+}
+.text-white-transparent-8 {
+    color: rgba(255,255,255,.8)!important;
+}
+.text-white-transparent-9 {
+    color: rgba(255,255,255,.9)!important;
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+.btn-outline-light:hover {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
