@@ -51,7 +51,12 @@ def agenda(id):
 def login():
     if request.method=="GET" :
         return render_template('accounts/login.html')
-    response = make_response(redirect('/miagenda'))
+
+    next_ = request.args.get('next')
+    if str(next_) != 'None':
+        response = make_response(redirect(next_))
+    else:
+        response = make_response(redirect('/miagenda'))
     
     data = request.form
     cuenta = m.Cuenta.query.filter(m.Cuenta.correo==data['correo'], m.Cuenta.contraseña==data['contrasena']).first()
