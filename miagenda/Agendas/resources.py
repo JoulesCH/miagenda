@@ -102,6 +102,10 @@ def signup():
         m.db.session.add(model)
     
     m.db.session.commit()
-    response = make_response(redirect('/miagenda'))
+    response = make_response(redirect('/gestionar_agenda'))
     response.set_cookie('token', sesion.token)
     return response
+
+@login_required
+def gestionar_agenda():
+    return render_template('agendas/gestionar_agenda.html')

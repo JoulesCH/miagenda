@@ -18,6 +18,9 @@
 .bg-gradient-custom-indigo{
     background: linear-gradient(70deg, #866DF9, #6D5AC4);
 }
+.bg-gradient-custom-gray{
+    background: linear-gradient(70deg, #B2B2B2, #868686);
+}
 .rounded {
     border-radius: 6px!important;
 }
