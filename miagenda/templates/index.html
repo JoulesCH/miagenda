@@ -72,9 +72,9 @@
             Permite sincronizarlo con compañeros de clase permitiendo que podamos invitarlos y compartir la agenda. Actualmente sigue en fase de desarrollo.
           </p>
         </div>
-        <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="overflow-hidden" style="max-height: 70vh;">
           <div class="container px-5">
-            <img src="https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+            <img src="https://i.ibb.co/3FLyCvv/imagen-2021-12-08-182123.png" alt="imagen-2021-12-08-182123" border="0">  
           </div>
         </div>
       </div>
@@ -82,11 +82,11 @@
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img src="https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          <img src="https://i.ibb.co/Kq09CK4/imagen-2021-12-08-182305.png" alt="imagen-2021-12-08-182305" border="0">  
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3">Toda la información de tus materias en un solo lugar</h1>
-          <p class="lead">Podrías</p>
+          <p class="lead">Podrás actualizar cuando lo requieras y mantener la información más importante a la mano.</p>
         </div>
       </div>
     </div>
@@ -98,23 +98,48 @@
           <p class="col-lg-10 fs-4">Totalmente gratuito</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-          <form class="p-4 p-md-5 border rounded-3 bg-light">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <form action="/signup" method="POST">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                  <path fill="#FE8B6A" fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                  <path fill="#FE8B6A"  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                  <path fill="#FE8B6A" d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                </svg>
+          <h1 class="h3 mb-3  mt-3 fw-normal">Registrarse</h1>
+      
+          <div class="form-floating mb-3">
+              <input required name="correo" autofocus type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               <label for="floatingInput">Correo</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          </div>
+          <div class="form-floating mb-3">
+              <input required name="contrasena" type="password" class="form-control" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Contraseña</label>
-            </div>
-            <div class="checkbox mb-3">
+          </div>
+          <div class="form-floating mb-3">
+            <input  required onkeyup="compare_input()" name="contasena2" type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+            <label for="floatingPassword2">Verificar contraseña</label>
+          </div>
+          <div class="form-floating mb-3">
+              <input required name="escuela" type="text" class="form-control" id="floatingEscuela" placeholder="Escuela">
+              <label for="floatingEscuela">Escuela</label>
+          </div>
+          <div class="checkbox mb-3">
               <label>
-                <input type="checkbox" value="remember-me"> No cerrar sesión
+              <input  type="checkbox" value="remember-me"> Recordar este dispositivo
               </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Crear cuenta</button>
-            <hr class="my-4">
-            <small class="text-muted">Dando clic en Crear cuenta, aceptas los términos de uso.</small>
+          </div>
+          {%if error%}
+              <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar2-x" viewBox="0 0 16 16">
+                      <path d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z"/>
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                      <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+                    </svg>
+                  {{error}}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          {%endif%}
+          <button id="gobtn" class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
+          <p class="mt-5 mb-3 text-muted"><a href="/login" style=" color: #101740;">Iniciar sesión</a></p>
           </form>
         </div>
       </div>

@@ -1,3 +1,7 @@
+"""
+Funciones de utilidades
+"""
+
 from colorama import Fore, Back, Style
 
 

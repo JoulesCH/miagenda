@@ -1,3 +1,6 @@
+"""
+Registra las vistas de la aplicación (arquitectura vista controlador)
+"""
 from core import app
 from . import resources
   

@@ -1,1 +1,68 @@
 {%extends "/base/base.html"%}
+
+{%block content%}
+<div style="padding-top:80px; margin:30px;" class="tip" markdown="1">
+<h1 id="-miagenda-com-https-miagendacom-herokuapp-com-" style="text-align: center;"><a href="https://miagendacom.herokuapp.com">miagenda.com</a></h1>
+<br>
+<p>Hoy en día resulta indispensable el uso de plataformas de comunicación para poder realizar nuestras actividades diarias; específicamente en el ámbito escolar con la modalidad en línea, donde los estudiantes tienen clases con diferentes enlaces y hasta diferentes plataformas, de modo que se tienen que idear maneras de tener a la mano todos los enlaces y códigos de acceso junto con los datos de la materia.</p>
+<p><strong>Por lo que hemos decidido crear una plataforma online diseñada para que los estudiantes puedan digitalizar su agenda escolar.</strong></p>
+
+<p>Enlace al repositorio: <a href="https://github.com/JoulesCH/miagenda"> https://github.com/JoulesCH/miagenda</a></p>
+<hr>
+<h3 id="-casos-de-uso">✅ Casos de uso</h3>
+<p>La plataforma contará con las actividades básicas tales como: insertar,
+buscar, actualizar y borrar información.</p>
+<p>Los estudiantes crearán una cuenta en nuestra plataforma y añadirán <strong>materias</strong>:</p>
+<ul>
+<li>Cada materia contiene campos que ayudarán a los estudiantes tener a la
+mano la información más importante, como por ejemplo: evaluación,
+nombre del maestro, grupo y por supuesto los enlaces a las plataformas.</li>
+<li>El estudiante podrá elegir un color distintivo para cada materia</li>
+</ul>
+<p>Cada vez que un estudiante con sesión iniciada acceda a la plataforma:</p>
+<ul>
+<li><p>Le mostrará en grande la materia que está por iniciar, junto con sus datos, permitiendo que en un solo
+clic se pueda acceder a las plataformas. También le permitirá ver las siguientes materias del día.</p>
+</li>
+<li><p>Podrá generar enlaces a la agenda de su grupo y los comparta con
+sus compañeros, agregando consistencia a los datos.</p>
+</li>
+</ul>
+<h3 id="-casos-de-uso-no-soportados">❎ Casos de uso no soportados</h3>
+<ul>
+<li>No existirá un buscador de agendas</li>
+<li>No se permitirá traslape de materias</li>
+<li>El usuario no puede tener dos o más agendas</li>
+<li>No existen agendas privadas, es decir, cualquier enlace a la agenda es accesible por la web</li>
+</ul>
+<hr>
+<section>
+<h3 id="-arquitectura">⛩ Arquitectura</h3>
+<h3 id="tecnolog-as">Tecnologías</h3>
+<p><strong>Frontend</strong></p>
+<p><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&amp;logo=css3&amp;logoColor=white" alt="CSS3">
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E" alt="JavaScript">
+<img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white" alt="Bootstrap">
+<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&amp;logo=SASS&amp;logoColor=white" alt="SASS"></p>
+<p><strong>Backend</strong></p>
+<p><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python">
+<img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&amp;logo=flask&amp;logoColor=white" alt="Flask">
+<img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" alt="Postgres">
+<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker"></p>
+<p><strong>DevOps</strong></p>
+<p><img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&amp;logo=heroku&amp;logoColor=white" alt="Heroku">
+<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white" alt="Docker">
+<img src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&amp;logo=nginx&amp;logoColor=white" alt="Nginx"></p>
+
+</section>
+<h3 id="-diagramas">📊 Diagramas</h3>
+<p><strong>Diagrama de Entidad Relación</strong>
+<img style="width:100%;"  src="https://i.ibb.co/r203FPw/miagenda-com.png" alt="img"></p>
+<p><strong>Diagrama de Casos de Uso</strong>
+<img style="width:100%;"  src="https://i.ibb.co/dKyTrXg/Diagrama-en-blanco-1.png" alt="img"></p>
+<p><strong>Diagrama de Clases</strong>
+<img style="width:100%;" src="https://i.ibb.co/gM8dDhh/Diagrama-en-blanco.png" alt="img"></p>
+</div>
+
+{%endblock%}
