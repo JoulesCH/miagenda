@@ -58,17 +58,13 @@ sus compañeros, agregando consistencia a los datos.
 
 ### 📊 Diagramas
 
-Diagrama de Entidad Relación
+**Diagrama de Entidad Relación**
 ![img](https://i.ibb.co/r203FPw/miagenda-com.png)
 
 
-Diagrama de Casos de Uso
-![img](https://i.ibb.co/sVcXd3C/casosdeuso.png)
+**Diagrama de Casos de Uso**
+![img](https://i.ibb.co/dKyTrXg/Diagrama-en-blanco-1.png)
 
-### 🧬 Modelo de datos
+**Diagrama de Clases**
+![img](https://i.ibb.co/gM8dDhh/Diagrama-en-blanco.png)
 
----
-## ❗ Limitaciones
-
----
-## 🏧 Costo
